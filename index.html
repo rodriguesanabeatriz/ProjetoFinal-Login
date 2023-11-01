@@ -1,43 +1,63 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Atividade Avaliativa 2 - Login</title>
-    <link rel="stylesheet" href="styles/geral.css">
-    <link rel="stylesheet" href="styles/@media.css" media="screen and (max-width: 768px)">
+   <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Atividade Avaliativa 2 - Login</title>
+      <link rel="stylesheet" href="styles/geral.css">
+      <link rel="stylesheet" href="styles/@media.css" media="screen and (max-width: 768px)">
+   </head>
+   <body>
 
-</head>
-<body>
+      <div id="pagina">
 
-    <div id="pagina">
-        <header>
+        <!-- Cabeçalho -->
+         <header>
             <div id="logo">
-                <img src="images/logo.jpg">
+               <img src="images/logo.jpg">
             </div>
-            <nav>
-               <ul> 
-                    <li><a id="linkNav" href="index.html">Home</a></li>
-                    <li><a id="linkNav" href="pages/login.html">Login</a></li>
+            <nav id="menuPC">
+               <ul>
+                  <li><a id="linkNav" href="index.html">Home</a></li>
+                  <li><a id="linkNav" href="pages/login.html">Login</a></li>
                </ul>
             </nav>
-
-            <div id="menuMobile">
-                <img src="images/menuIcon.svg">
+            <div id="menuIcon" onclick="abrirMenu()">
+               <img src="images/menuIcon.svg">
             </div>
-        </header>
-        
-        <main id="mainHome">
-            <picture>
-                <!-- Picture - muitos srcs -->
-                <source srcset="images/livros1.jpg" media="screen and (max-width: 768px)">
-                <img src="images/livros.jpg" alt="Capas de alguns livros da autora Elena Ferrante.">
-            </picture>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque error ratione nulla, odit deserunt delectus libero illo sint itaque architecto natus id eos nesciunt pariatur ut aut, praesentium quia? Dolorem!</p>
-        </main>
+         </header>
+         <nav id="menuMobile">
+            <ul>
+               <li><a id="linkMenu" href="index.html">Home</a></li>
+               <li><a id="linkMenu" href="pages/login.html">Login</a></li>
+            </ul>
+         </nav>
 
-        <footer>Projeto Final - Curso Desenvolvedor Front-End @rodriguesanabeatriz</footer>
-    </div>
-</body>
+         <!-- Conteúdo -->
+         <main id="mainHome">
+             <h1>A febre Ferrante ✦</h1>
+            <picture>
+               <source srcset="images/livros1.jpg" media="screen and (max-width: 768px)">
+               <img src="images/livros.jpg" alt="Capas de alguns livros da autora Elena Ferrante.">
+            </picture>
+            <p>A “Febre Ferrante” é um movimento cultural que surgiu em torno da obra da autora italiana Elena Ferrante. A autora é conhecida por sua tetralogia napolitana, que conta a história da amizade entre duas mulheres, Elena Greco e Rafaella Cerullo, desde a infância até a velhice. A obra de Ferrante tem sido aclamada pela crítica e pelo público, e já vendeu mais de 12 milhões de exemplares em cerca de 50 países 1. O sucesso da autora inspirou o documentário “Ferrante Fever” (2017), que recolhe depoimentos de leitores ilustres, como Elizabeth Strout, Hillary Clinton, Jonathan Franzen e Roberto Saviano 12. A tetralogia é considerada um fenômeno de exceção por sua qualidade literária e por se localizar em algum lugar entre a literatura popular e o que chamam de “alta literatura”.<br><br>
+            Venha fazer parte do nosso cube do livro, faça o seu cadastro <a id="aHome" href="pages/cadastro.html">aqui</a> 📖!</p>
+         </main>
+
+         <!-- Rodapé -->
+         <footer>Projeto Final - Curso Desenvolvedor Front-End @rodriguesanabeatriz</footer> 
+      </div>
+
+      <!-- JavaScript -->
+      <script>
+         function abrirMenu(){
+             if(menuMobile.style.display == "none"){
+             menuMobile.style.display = "flex";
+             }else{
+                 menuMobile.style.display = "none";
+             }
+         }
+      </script>
+   </body>
 </html>

@@ -1,59 +1,71 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Atividade Avaliativa 2 - Login</title>
-    <link rel="stylesheet" href="../styles/geral.css">
-    <link rel="stylesheet" href="../styles/@media.css" media="screen and (max-width: 768px)">
+   <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Atividade Avaliativa 2 - Login</title>
+      <link rel="stylesheet" href="../styles/geral.css">
+      <link rel="stylesheet" href="../styles/@media.css" media="screen and (max-width: 768px)">
+   </head>
+   <body>
 
-</head>
-<body>
+      <div id="pagina">
 
-    <div id="pagina">
-        <header>
+         <!-- Cabeçalho -->
+         <header>
             <div id="logo">
-                <img src="../images/logo.jpg">
+               <img src="../images/logo.jpg">
             </div>
-            <nav>
-               <ul> 
-                    <li><a id="linkNav" href="../index.html">Home</a></li>
-                    <li><a id="linkNav" href="../pages/login.html">Login</a></li>
+            <nav id="menuPC">
+               <ul>
+                  <li><a id="linkNav" href="../index.html">Home</a></li>
+                  <li><a id="linkNav" href="../pages/login.html">Login</a></li>
                </ul>
             </nav>
-
-            <div id="menuMobile">
-                <img src="../images/menuIcon.svg">
+            <div id="menuIcon" onclick="abrirMenu()">
+               <img src="../images/menuIcon.svg">
             </div>
-        </header>
+         </header>
+         <nav id="menuMobile">
+            <ul>
+               <li><a href="../index.html">Home</a></li>
+               <li><a href="../pages/login.html">Login</a></li>
+            </ul>
+         </nav>
 
-        <main id="main2">
+         <!-- Conteúdo -->
+         <main id="main2">
             <div id="banner">
-                <div id="efeito"></div>
+               <div id="efeito"></div>
             </div>
             <div id="formulario">
-                <h2>Login</h2>
-                <form action="#" method="post">
-                    <label for="nome">Digite o nome de usuário ou e-mail:</label>
-                    <input type="text" id="nome" placeholder=" Nome de usuário ou e-mail">
-                    
-                    <label for="senha">Digite a sua senha:</label>
-                    <input type="password" id="senha" placeholder=" Senha">
-
-                    <button type="submit">Acessar</button>  
-
-                    <a href="../pages/esqueceuSenha.html">Esqueci minha senha</a>
-                    <a href="../pages/cadastro.html">Ainda não possui cadastro? Clique aqui!</a>
+               <h2>Login</h2>
+               <form action="#" method="post">
+                  <label for="nome">Digite o nome de usuário ou e-mail:</label>
+                  <input type="text" id="nome" placeholder=" Nome de usuário ou e-mail">
+                  <label for="senha">Digite a sua senha:</label>
+                  <input type="password" id="senha" placeholder=" Senha">
+                  <button type="submit">Acessar</button>  
+                  <a id="aLogin" href="../pages/esqueceuSenha.html">Esqueci minha senha</a>
+                  <a id="aLogin" href="../pages/cadastro.html">Ainda não possui cadastro? Clique aqui!</a>
                </form>
-            </div>    
-        </main>
+            </div>
+         </main>
 
+         <!-- Rodapé -->
+         <footer>Projeto Final - Curso Desenvolvedor Front-End @rodriguesanabeatriz</footer>
+      </div>
 
-        
-        <footer>Projeto Final - Curso Desenvolvedor Front-End @rodriguesanabeatriz</footer>
-    
-    </div>
-
-</body>
+      <!-- JavaScript -->
+      <script>
+         function abrirMenu(){
+             if(menuMobile.style.display == "none"){
+             menuMobile.style.display = "flex";
+             }else{
+                 menuMobile.style.display = "none";
+             }
+         }        
+      </script>
+   </body>
 </html>
